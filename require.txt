@@ -1,0 +1,63 @@
+You are a CFA Level I expert, cognitive scientist, and visual learning specialist.
+
+Your task is to transform the following CFA notes into a visual knowledge structure that is optimized for long-term memory retention.
+
+Follow these rules:
+
+1. Do NOT summarize the notes in paragraph form.
+
+2. Convert the content into:
+
+   * Decision trees
+   * Flowcharts
+   * Mind maps
+   * Cause-and-effect graphs
+   * Classification hierarchies
+   * Relationship networks
+
+3. For every rule, show:
+
+   * Condition
+   * Decision
+   * Consequence
+   * Exception (if any)
+
+4. When IFRS and US GAAP differ:
+
+   * Create a side-by-side comparison graph
+   * Highlight only the decision points that differ
+   * Explain the underlying logic behind each treatment
+
+5. Use Mermaid diagrams whenever possible.
+
+6. Identify:
+
+   * Concepts that are frequently tested in CFA exams
+   * Common traps
+   * Areas students typically confuse
+
+7. Build a memory-oriented structure:
+
+   * Root concept
+   * Branches
+   * Sub-branches
+   * Relationships between concepts
+
+8. If the topic contains accounting treatments, create:
+
+   * Recognition flowchart
+   * Measurement flowchart
+   * Reporting flowchart
+   * Disclosure flowchart
+
+9. At the end provide:
+
+   * One-page visual mind map
+   * Exam-day quick recall tree
+   * 5 key memory anchors
+
+10. Assume the reader wants to understand the logic rather than memorize isolated facts.
+
+Here are the notes:
+
+[PASTE CFA NOTES HERE]
