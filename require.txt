@@ -61,3 +61,15 @@ Follow these rules:
 Here are the notes:
 
 [PASTE CFA NOTES HERE]
+
+
+Since Harpreet already walked you through the main objective of this use case, I'll give you the overview — a few more objectives, the end-to-end process, the value we get out of it, and where we're headed next.
+First, the objectives. The core one is automatic validation. We've built Python code that reconciles all our IAA reports against the consumable and Morningstar source data. It finds every mismatch and flags it with a true-false status before anything goes out to the client — so nothing slips through unchecked.
+Second, scalability. When a new portfolio arrives next month, we don't need to modify the code. The same pipeline handles it.
+Third, evidence. The system produces detailed Excel output with pass-fail status for every check, plus a consolidated batch-level summary — one view of the entire validation.
+Now, the end-to-end process. It starts with input. We need three things: the raw source files from consumable and Morningstar, the report we want to validate, and a configuration file where we set input variables — for example, the current month we want to run.
+The second step is extract. We pull all the tables from across the reports and keep them in one place. Then, based on each table in the report, we pull the same information from the raw files and curate it to match the report's structure.
+Third is validation. We place the report and the raw output side by side and do a cell-by-cell comparison within defined tolerance values. We're checking tables like policies, allocation, performance, and cash flow statistics.
+Finally, output. We provide two things: an Excel file for each report containing three tables — the report, the raw, and the comparison — and once all reports are validated, a summary table giving one consolidated view of the entire validation.
+Now, the value. First, confidence — every number checked during validation is verified each month, so the team only needs to focus on exception cases where the pipeline might not able to the validate due to so unknown scenerio we might not have cover in the pipeline. Second, consistency — the same rules apply every single run, so you always get the same output. Third, auditability — we maintain permanent records of both the report and the source. And fourth, maintainability — with minimal developer effort, we can maintain the whole pipeline.
+As for what's next, we want to receive more reports so we can surface all the edge cases. We're also working on a scheduler that automatically runs the process whenever a new file arrives in the input location without having us manually trigger the workflow. And finally, we're building a cloud setup so that whoever envolve on this project can access and run it.
